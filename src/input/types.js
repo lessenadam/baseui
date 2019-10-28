@@ -171,3 +171,9 @@ export type StatefulInputPropsT = {
   ...StInputPropsDiffT,
   overrides?: InputComponentsT,
 };
+
+export type ValidationInputPropsT = {
+  ...InputPropsT,
+  validateInput?: string => boolean,
+  onIsValidChange?: boolean => void,
+};
