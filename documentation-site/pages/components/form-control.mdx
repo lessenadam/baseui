@@ -51,11 +51,13 @@ If that child has an `id` prop, the `label` in the form control will assign the 
 </Example>
 
 <Example
-  title="Validated Input (e.g.: email)"
+  title="Validated Input (default is for email)"
   path="form-control/validated-form-control.js"
 >
   <ValidationFormControl />
 </Example>
+
+The `ValidationFormControl` is an out of the box component that can handle validation and error states for you. By default, it will validate an email for you. However, you can pass a custom `validateInput` that takes the value on change and updates the internal validation state.
 
 <Example title="Checkbox" path="form-control/checkbox.js">
   <CheckboxExample />

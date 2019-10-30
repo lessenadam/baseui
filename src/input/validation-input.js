@@ -37,7 +37,7 @@ const ValidationInput = ({
   onBlur,
   placeholder,
   overrides,
-  error, // specifying error here to remove from baseProps
+  error, // extracting error here to remove from baseProps
   ...baseProps
 }: ValidationInputPropsT) => {
   const internalValidateInput = validateInput || validateEmail;

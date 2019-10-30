@@ -7,6 +7,7 @@ LICENSE file in the root directory of this source tree.
 
 // @flow
 export {default as FormControl} from './form-control.js';
+export {default as ValidationFormControl} from './validation-form-control.js';
 export {
   Label as StyledLabel,
   Caption as StyledCaption,

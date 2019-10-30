@@ -8,6 +8,7 @@ LICENSE file in the root directory of this source tree.
 // @flow
 import * as React from 'react';
 import type {OverrideT} from '../helpers/overrides.js';
+import type {InputPropsT} from '../input/types.js';
 
 export type FormControlPropsT = {
   overrides: {
@@ -36,3 +37,20 @@ export type StylePropsT = {
   $error?: boolean,
   $positive?: boolean,
 };
+
+type OmitInputPropsT = {
+  error: boolean,
+};
+
+type IPropsT = $Diff<InputPropsT, OmitInputPropsT>;
+
+type VFormControlPropsT = {
+  label?: ?(React.Node | ((props: {}) => React.Node)),
+  caption?: ?(React.Node | ((props: {}) => React.Node)),
+  disabled?: boolean,
+  error?: React.Node | ((props: {}) => React.Node),
+  validateInput?: string => boolean,
+  updateIsValid?: boolean => void,
+};
+
+export type ValidationFormControlPropsT = IPropsT & VFormControlPropsT;
